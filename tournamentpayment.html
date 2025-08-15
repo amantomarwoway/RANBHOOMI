@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranbhoomi - Tournament Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        header { background: #ff4d4d; padding: 15px; text-align: center; color: white; font-size: 24px; }
+        .payment-section { text-align: center; padding: 20px; }
+        .btn-primary { background: #ff4d4d; color: white; border: none; padding: 12px 20px; font-size: 16px; cursor: pointer; border-radius: 5px; }
+        .btn-primary:hover { background: #e63e3e; }
+        .message-box { text-align: center; padding: 20px; margin-top: 30px; border-radius: 10px; display: none; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .details { margin: 20px auto; padding: 15px; background: #f5f5f5; border-radius: 8px; max-width: 400px; }
+        .slot-counter { font-size: 18px; margin: 10px 0; color: #ff4d4d; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        🎮 Ranbhoomi
+    </header>
+
+    <section class="payment-section" id="paymentSection">
+        <h1>🎯 Tournament Entry Payment</h1>
+
+        <!-- Tournament Details -->
+        <div class="details">
+            <p><strong>Tournament:</strong> Free Fire - Clash Squad</p>
+            <p><strong>Map:</strong> Bermuda</p>
+            <p><strong>Date & Time:</strong> 15 Aug 2025, 8:00 PM</p>
+            <p><strong>Entry Fee:</strong> ₹149</p>
+            <p><strong>Reward:</strong> Depends on total players</p>
+            <p class="slot-counter">Slots Left: <span id="slotsLeft">12</span>/50</p>
+        </div>
+
+        <!-- Payment Button -->
+        <button id="payBtn" class="btn-primary">Pay & Join Tournament</button>
+    </section>
+
+    <!-- Success and Error Messages -->
+    <div id="successMsg" class="message-box success">
+        ✅ Payment Successful! Welcome to the tournament.<br>
+        <a href="#" id="downloadReceipt">📄 Download Receipt</a>
+    </div>
+
+    <div id="errorMsg" class="message-box error">
+        ❌ Payment Failed or Cancelled. Please try again.
+    </div>
+
+    <footer>
+        <p style="text-align:center;">© 2025 Ranbhoomi</p>
+    </footer>
+
+    <!-- Razorpay Script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        // Receipt Generator (Simple Text File)
+        function generateReceipt(paymentId) {
+            const receiptContent = `Ranbhoomi Tournament Entry Receipt\n\nPayment ID: ${paymentId}\nTournament: Free Fire - Clash Squad\nMap: Bermuda\nEntry Fee: ₹149\nDate: ${new Date().toLocaleString()}`;
+            const blob = new Blob([receiptContent], { type: "text/plain" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "Ranbhoomi_Receipt.txt";
+            link.click();
+        }
+
+        document.getElementById('payBtn').onclick = function(e){
+            var options = {
+                "key": "rzp_test_yourKeyHere", // Replace with your Razorpay Key ID
+                "amount": 14900, // ₹149 in paise
+                "currency": "INR",
+                "name": "Ranbhoomi",
+                "description": "Tournament Entry Fee",
+                "image": "logo.png",
+                "handler": function (response){
+                    document.getElementById('paymentSection').style.display = 'none';
+                    document.getElementById('successMsg').style.display = 'block';
+                    document.getElementById('downloadReceipt').onclick = function(){
+                        generateReceipt(response.razorpay_payment_id);
+                    };
+                },
+                "modal": {
+                    "ondismiss": function(){
+                        document.getElementById('paymentSection').style.display = 'none';
+                        document.getElementById('errorMsg').style.display = 'block';
+                    }
+                },
+                "theme": { "color": "#ff4d4d" }
+            };
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+            e.preventDefault();
+        }
+
+        // Example slot counter update (can be replaced with DB fetch)
+        let slots = 12;
+        setInterval(() => {
+            if (slots > 0) {
+                document.getElementById("slotsLeft").innerText = slots;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranbhoomi Payment</title>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 50px; background: #f2f2f2; }
+    button { padding: 15px 30px; font-size: 18px; cursor: pointer; background: #ff3b3f; color: white; border: none; border-radius: 5px; }
+  </style>
+</head>
+<body>
+
+  <h1>Ranbhoomi Tournament Registration</h1>
+  <p>Click below to pay and enter the tournament</p>
+
+  <button id="payBtn">Pay & Register</button>
+
+  <script>
+    const payBtn = document.getElementById('payBtn');
+
+    payBtn.addEventListener('click', async () => {
+
+      // Step 1: Call backend to create Razorpay order
+      const orderData = await fetch('/create-order', { 
+        method: 'POST', 
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ amount: 50000 }) // 50000 paise = ₹500 entry fee
+      }).then(res => res.json());
+
+      if (!orderData || !orderData.id) {
+        alert('Error creating order. Try again.');
+        return;
+      }
+
+      // Step 2: Razorpay checkout options
+      const options = {
+        key: 'rzp_test_1234567890abcdef', // Example Razorpay Key ID (replace with your own)
+        amount: orderData.amount,
+        currency: 'INR',
+        name: 'Ranbhoomi Tournament',
+        description: 'Tournament Entry Fee',
+        order_id: orderData.id,
+        handler: async function (response) {
+          // Step 3: Call backend to verify payment & auto-entry
+          const verify = await fetch('/verify-payment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              order_id: response.razorpay_order_id,
+              payment_id: response.razorpay_payment_id,
+              signature: response.razorpay_signature,
+              user_id: '101',       // Example User ID
+              tournament_id: '5'    // Example Tournament ID
+            })
+          }).then(res => res.json());
+
+          if (verify.success) {
+            alert('Payment verified! You are entered in tournament.');
+            window.location.href = 'tournament-confirmation.html'; // Optional redirect
+          } else {
+            alert('Payment verification failed!');
+          }
+        },
+        prefill: {
+          name: 'Aman Tomar',        // Example User Name
+          email: 'aman@example.com', // Example Email
+          contact: '9876543210'      // Example Phone Number
+        },
+        theme: { color: '#ff3b3f' }
+      };
+
+      const rzp1 = new Razorpay(options);
+      rzp1.open();
+    });
+  </script>
+
+</body>
+</html>
