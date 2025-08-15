@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranbhoomi - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">🎮 <span>Ranbhoomi</span></div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="tournaments.html">Tournaments</a>
+            <a href="results.html">Results</a>
+            <a href="login.html" class="btn">Login</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to Ranbhoomi</h1>
+            <p>The ultimate battleground for gamers. Compete, Win & Conquer!</p>
+            <a href="signup.html" class="btn-primary">Register Now</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>🔥 Why Choose Ranbhoomi?</h2>
+        <div class="feature-list">
+            <div class="feature">
+                <h3>🏆 Big Prizes</h3>
+                <p>Win exciting cash rewards and gaming gear.</p>
+            </div>
+            <div class="feature">
+                <h3>⚡ Quick Registration</h3>
+                <p>Easy signup and instant tournament entry.</p>
+            </div>
+            <div class="feature">
+                <h3>🌍 Global Competition</h3>
+                <p>Compete with top players worldwide.</p>
+            </div>
+            <div class="feature">
+                <h3>🎯 Fair Play</h3>
+                <p>Strict anti-cheat measures for fair gameplay.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Ranbhoomi | Made for Gamers, by Gamers</p>
+    </footer>
+
+</body>
+</html>
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #fff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff4d4d;
+}
+.logo span {
+    color: #00e6e6;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #ff4d4d;
+}
+nav a.active {
+    color: #00e6e6;
+}
+nav a.btn {
+    background: #ff4d4d;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+nav a.btn:hover {
+    background: #e60000;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url('gaming-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+.hero h1 {
+    font-size: 3rem;
+    color: #00e6e6;
+}
+.hero p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+.btn-primary {
+    background: linear-gradient(45deg, #ff4d4d, #ff1a75);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-primary:hover {
+    background: linear-gradient(45deg, #ff1a75, #ff4d4d);
+    transform: scale(1.05);
+}
+
+/* Features */
+.features {
+    padding: 3rem 2rem;
+    background: #1a1a1a;
+}
+.features h2 {
+    text-align: center;
+    color: #ff4d4d;
+    margin-bottom: 2rem;
+}
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.feature {
+    background: #262626;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    transition: 0.3s;
+}
+.feature:hover {
+    background: #333;
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1a1a1a;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .feature-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
