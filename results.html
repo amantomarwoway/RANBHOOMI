@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranbhoomi - Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">🎮 <span>Ranbhoomi</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="tournaments.html">Tournaments</a>
+            <a href="results.html" class="active">Results</a>
+            <a href="login.html" class="btn">Login</a>
+        </nav>
+    </header>
+
+    <!-- Results Section -->
+    <section class="results">
+        <h2>🏅 Recent Tournament Results</h2>
+        <div class="results-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player Name</th>
+                        <th>Game</th>
+                        <th>Prize</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🥇 1</td>
+                        <td>Rajesh Gamer</td>
+                        <td>Battle Royale Showdown</td>
+                        <td>₹5,000</td>
+                    </tr>
+                    <tr>
+                        <td>🥈 2</td>
+                        <td>Amit Sniper</td>
+                        <td>Deathmatch Domination</td>
+                        <td>₹3,000</td>
+                    </tr>
+                    <tr>
+                        <td>🥉 3</td>
+                        <td>Priya Pro</td>
+                        <td>Sniper Elite Challenge</td>
+                        <td>₹1,500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Ranbhoomi | Made for Gamers, by Gamers</p>
+    </footer>
+
+</body>
+</html>
+/* Results Page */
+.results {
+    padding: 3rem 2rem;
+    background: #0d0d0d;
+    text-align: center;
+}
+
+.results h2 {
+    color: #ff4d4d;
+    margin-bottom: 2rem;
+}
+
+.results-table {
+    overflow-x: auto;
+}
+
+.results table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.results th, .results td {
+    border: 1px solid #333;
+    padding: 12px;
+    color: #fff;
+}
+
+.results th {
+    background: #1a1a1a;
+    color: #00e6e6;
+}
+
+.results tr:nth-child(even) {
+    background: #1a1a1a;
+}
+
+.results tr:hover {
+    background: #262626;
+}
