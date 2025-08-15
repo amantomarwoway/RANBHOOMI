@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranbhoomi - Tournaments</title>
+    <title>Ranbhoomi - Free Fire Tournaments</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,32 +15,44 @@
             <a href="index.html">Home</a>
             <a href="tournaments.html" class="active">Tournaments</a>
             <a href="results.html">Results</a>
-            <a href="login.html" class="btn">Login</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
         </nav>
     </header>
 
     <!-- Tournaments Section -->
     <section class="tournaments">
-        <h2>🏆 Upcoming Tournaments</h2>
+        <h1>🔥 Free Fire Tournaments</h1>
         <div class="tournament-list">
+
+            <!-- Free Fire Clash Squad -->
             <div class="tournament-card">
-                <img src="game1.jpg" alt="Game 1">
-                <h3>Battle Royale Showdown</h3>
-                <p>Entry Fee: ₹100 | Prize Pool: ₹5000</p>
-                <a href="signup.html" class="btn-primary">Join Now</a>
+                <img src="freefire-clash.jpg" alt="Free Fire Clash Squad">
+                <div class="tournament-info">
+                    <h2>Free Fire - Clash Squad</h2>
+                    <p>Entry Fee: ₹149</p>
+                    <p>Date: 20 August 2025</p>
+                    <p>Time: 6:00 PM</p>
+                    <p>Player Limit: 48</p>
+                    <p>Reward: Depends on total players</p>
+                    <button class="btn-primary">Join Now</button>
+                </div>
             </div>
+
+            <!-- Free Fire Bermuda -->
             <div class="tournament-card">
-                <img src="game2.jpg" alt="Game 2">
-                <h3>Deathmatch Domination</h3>
-                <p>Entry Fee: ₹150 | Prize Pool: ₹7500</p>
-                <a href="signup.html" class="btn-primary">Join Now</a>
+                <img src="freefire-bermuda.jpg" alt="Free Fire Bermuda">
+                <div class="tournament-info">
+                    <h2>Free Fire - Bermuda</h2>
+                    <p>Entry Fee: ₹149</p>
+                    <p>Date: 22 August 2025</p>
+                    <p>Time: 7:00 PM</p>
+                    <p>Player Limit: 50</p>
+                    <p>Reward: Depends on total players</p>
+                    <button class="btn-primary">Join Now</button>
+                </div>
             </div>
-            <div class="tournament-card">
-                <img src="game3.jpg" alt="Game 3">
-                <h3>Sniper Elite Challenge</h3>
-                <p>Entry Fee: ₹200 | Prize Pool: ₹2100</p>
-                <a href="signup.html" class="btn-primary">Join Now</a>
-            </div>
+
         </div>
     </section>
 
@@ -51,149 +63,275 @@
 
 </body>
 </html>
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+/* Tournament Page */
+.tournaments {
+    padding: 2rem 1rem;
+    background: linear-gradient(to right, #0d0d0d, #1a1a1a);
+    color: white;
+    text-align: center;
 }
 
-body {
-    background-color: #0d0d0d;
-    color: #fff;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: #1a1a1a;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
+.tournaments h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
     color: #ff4d4d;
 }
-.logo span {
+
+.tournament-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.tournament-card {
+    background: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(255, 77, 77, 0.4);
+    text-align: left;
+}
+
+.tournament-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tournament-info {
+    padding: 1rem;
+}
+
+.tournament-info h2 {
+    margin-bottom: 0.5rem;
     color: #00e6e6;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 1rem;
-    transition: 0.3s;
+.tournament-info p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+    color: #ccc;
 }
-nav a:hover {
-    color: #ff4d4d;
-}
-nav a.active {
-    color: #00e6e6;
-}
-nav a.btn {
+
+.btn-primary {
+    display: inline-block;
     background: #ff4d4d;
-    padding: 0.5rem 1rem;
+    color: white;
+    padding: 10px 15px;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
 }
-nav a.btn:hover {
+
+.btn-primary:hover {
     background: #e60000;
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ranbhoomi - Free Fire Tournaments</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
 
-/* Hero Section */
-.hero {
-    position: relative;
-    height: 90vh;
-    background: url('gaming-bg.jpg') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-}
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-.hero h1 {
-    font-size: 3rem;
-    color: #00e6e6;
-}
-.hero p {
-    margin: 1rem 0;
-    font-size: 1.2rem;
-}
-.btn-primary {
-    background: linear-gradient(45deg, #ff4d4d, #ff1a75);
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: 0.3s;
-}
-.btn-primary:hover {
-    background: linear-gradient(45deg, #ff1a75, #ff4d4d);
-    transform: scale(1.05);
-}
+  <!-- Header -->
+  <header>
+    <div class="logo">🎮 <span>Ranbhoomi</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tournaments.html" class="active">Tournaments</a>
+      <a href="results.html">Results</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </nav>
+  </header>
 
-/* Features */
-.features {
-    padding: 3rem 2rem;
-    background: #1a1a1a;
-}
-.features h2 {
-    text-align: center;
-    color: #ff4d4d;
-    margin-bottom: 2rem;
-}
-.feature-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.feature {
-    background: #262626;
-    margin: 1rem;
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    width: 250px;
-    transition: 0.3s;
-}
-.feature:hover {
-    background: #333;
-    transform: translateY(-5px);
-}
+  <section class="tournaments pro">
+    <h1>🔥 Free Fire Tournaments</h1>
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #1a1a1a;
-    margin-top: 2rem;
-}
+    <div class="tournament-list">
 
-/* Responsive */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
+      <!-- Clash Squad -->
+      <article class="tournament-card" data-id="clash">
+        <div class="badge badge-popular">🔥 Most Popular</div>
+        <img src="freefire-clash.jpg" alt="Free Fire Clash Squad"/>
+        <div class="tournament-info">
+          <h2>Free Fire – Clash Squad</h2>
+          <p class="meta"><span>Mode:</span> Clash Squad &nbsp; • &nbsp; <span>Map:</span> Random</p>
+          <p class="meta"><span>Date:</span> 20 Aug 2025 &nbsp; • &nbsp; <span>Time:</span> 6:00 PM</p>
+          <p class="meta"><span>Entry Fee:</span> ₹149 &nbsp; • &nbsp; <span>Slots:</span> <span class="slots">48</span></p>
+
+          <div class="live-row">
+            <div class="live-count"><span class="dot"></span> Players Joined: <strong class="joined" data-target="48">0</strong></div>
+            <div class="countdown" data-start="2025-08-20T18:00:00">Starts in: <span class="t"></span></div>
+          </div>
+
+          <div class="reward">
+            <h3>💰 Rewards (depend on total players)</h3>
+            <ul>
+              <li>Up to 20 players → Winner: ₹1,000</li>
+              <li>21 – 40 players → Winner: ₹2,500 | Runner‑up: ₹1,000</li>
+              <li>41 – 60 players → Winner: ₹4,000 | Runner‑up: ₹1,500 | 3rd: ₹500</li>
+            </ul>
+          </div>
+
+          <div class="rules">
+            <h4>📜 Quick Rules</h4>
+            <ul>
+              <li>No emulators & hacks (strict ban).</li>
+              <li>Room ID/Pass match शुरू होने से 10 मिनट पहले मिलेगा।</li>
+              <li>Late joiners allowed till round start time only.</li>
+            </ul>
+          </div>
+
+          <div class="cta-row">
+            <a href="signup.html" class="link">Create account</a>
+            <button class="btn-primary join-btn" data-tid="clash">Join Now</button>
+          </div>
+
+          <div class="org">
+            Organizer: Ranbhoomi Esports • Contact: +91-99999-99999
+          </div>
+        </div>
+      </article>
+
+      <!-- Bermuda -->
+      <article class="tournament-card" data-id="bermuda">
+        <div class="badge badge-limited">⚡ Limited Slots</div>
+        <img src="freefire-bermuda.jpg" alt="Free Fire Bermuda"/>
+        <div class="tournament-info">
+          <h2>Free Fire – Bermuda</h2>
+          <p class="meta"><span>Mode:</span> Battle Royale &nbsp; • &nbsp; <span>Map:</span> Bermuda</p>
+          <p class="meta"><span>Date:</span> 22 Aug 2025 &nbsp; • &nbsp; <span>Time:</span> 7:00 PM</p>
+          <p class="meta"><span>Entry Fee:</span> ₹149 &nbsp; • &nbsp; <span>Slots:</span> <span class="slots">50</span></p>
+
+          <div class="live-row">
+            <div class="live-count"><span class="dot"></span> Players Joined: <strong class="joined" data-target="50">0</strong></div>
+            <div class="countdown" data-start="2025-08-22T19:00:00">Starts in: <span class="t"></span></div>
+          </div>
+
+          <div class="reward">
+            <h3>💰 Rewards (depend on total players)</h3>
+            <ul>
+              <li>Up to 20 players → Winner: ₹1,000</li>
+              <li>21 – 40 players → Winner: ₹2,500 | Runner‑up: ₹1,000</li>
+              <li>41 – 100 players → Winner: ₹6,000 | Runner‑up: ₹2,000 | 3rd: ₹1,000</li>
+            </ul>
+          </div>
+
+          <div class="rules">
+            <h4>📜 Quick Rules</h4>
+            <ul>
+              <li>Solo/ Squad details room note में बताए जाएंगे.</li>
+              <li>In‑game name signup में जैसा है वैसा ही होना चाहिए.</li>
+              <li>Misconduct → immediate disqualification.</li>
+            </ul>
+          </div>
+
+          <div class="cta-row">
+            <a href="signup.html" class="link">Create account</a>
+            <button class="btn-primary join-btn" data-tid="bermuda">Join Now</button>
+          </div>
+
+          <div class="org">
+            Organizer: Ranbhoomi Esports • Contact: +91-99999-99999
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Ranbhoomi | Made for Gamers, by Gamers</p>
+  </footer>
+
+  <!-- Minimal JS for demo counters + countdown + button link -->
+  <script>
+    // Countdown timers
+    function startCountdown(el){
+      const start = new Date(el.dataset.start).getTime();
+      function tick(){
+        const now = Date.now();
+        let diff = start - now;
+        if (diff < 0) diff = 0;
+        const d = Math.floor(diff/(1000*60*60*24));
+        const h = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+        const m = Math.floor((diff%(1000*60*60))/(1000*60));
+        const s = Math.floor((diff%(1000*60))/1000);
+        el.querySelector('.t').textContent = `${d}d ${h}h ${m}m ${s}s`;
+        if (diff > 0) requestAnimationFrame(tick);
+      }
+      tick();
     }
-    .feature-list {
-        flex-direction: column;
-        align-items: center;
+    document.querySelectorAll('.countdown').forEach(startCountdown);
+
+    // Fake live joined counter (frontend demo only)
+    function animateJoined(el){
+      const target = Number(el.dataset.target) || 40;
+      let val = Math.max( Math.floor(target*0.4), 8 );
+      el.textContent = val;
+      const step = () => {
+        if (val < target - 2) { val += Math.ceil(Math.random()*2); el.textContent = val; }
+        setTimeout(step, 1500 + Math.random()*1500);
+      };
+      setTimeout(step, 1200);
     }
+    document.querySelectorAll('.joined').forEach(animateJoined);
+
+    // Join buttons → redirect to payment/registration (set your URL here)
+    document.querySelectorAll('.join-btn').forEach(btn=>{
+      btn.addEventListener('click', () => {
+        // बाद में यहाँ Razorpay/registration route जोड़ देना
+        // e.g. window.location.href = `/pay.html?tid=${btn.dataset.tid}&amount=149`;
+        window.location.href = `signup.html?tid=${btn.dataset.tid}&fee=149`;
+      });
+    });
+  </script>
+</body>
+</html>
+/* Pro Tournament layout */
+.tournaments.pro { padding: 2rem 1rem; background: linear-gradient(90deg,#0d0d0d,#1a1a1a); color:#fff; }
+.tournaments.pro h1 { text-align:center; color:#ff4d4d; margin:0 0 2rem; }
+
+.badge{position:absolute;top:12px;left:12px;background:#ff4d4d;color:#fff;padding:6px 10px;border-radius:20px;font-size:.8rem;font-weight:700}
+.badge-limited{background:#ff9f1a}
+.badge-popular{background:#ff4d4d}
+
+.tournament-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.25rem}
+.tournament-card{position:relative;background:#111;border-radius:12px;overflow:hidden;box-shadow:0 0 18px rgba(255,77,77,.25)}
+.tournament-card img{width:100%;height:200px;object-fit:cover}
+.tournament-info{padding:1rem 1.1rem}
+.tournament-info h2{color:#00e6e6;margin-bottom:.3rem}
+.meta{color:#bbb;font-size:.92rem;margin:.25rem 0}
+.meta span{color:#ddd}
+
+.live-row{display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin:.8rem 0 1rem}
+.live-count{font-size:.95rem}
+.live-count .dot{display:inline-block;width:8px;height:8px;background:#2bff88;border-radius:50%;margin-right:6px;box-shadow:0 0 10px #2bff88}
+
+.countdown{font-size:.9rem;color:#ccc}
+.countdown .t{font-weight:700;color:#fff}
+
+.reward{background:#161616;border:1px solid #242424;border-radius:8px;padding:.8rem;margin-bottom:1rem}
+.reward h3{margin-bottom:.5rem;color:#ffd166}
+
+.rules{background:#141414;border:1px dashed #2a2a2a;border-radius:8px;padding:.8rem;margin-bottom:1rem}
+.rules h4{margin-bottom:.4rem;color:#a0e7e5}
+.rules ul{padding-left:1.1rem}
+.rules li{margin:.2rem 0;color:#cfcfcf}
+
+.cta-row{display:flex;justify-content:space-between;align-items:center;gap:.75rem;margin-top:.5rem}
+.link{color:#00e6e6;text-decoration:none}
+.link:hover{text-decoration:underline}
+
+.org{margin-top:.8rem;color:#9e9e9e;font-size:.9rem}
+
+.btn-primary{display:inline-block;background:linear-gradient(45deg,#ff4d4d,#ff1a75);color:#fff;border:none;border-radius:8px;padding:.65rem 1.1rem;font-weight:700;cursor:pointer;transition:.25s}
+.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.05)}
+@media (max-width:720px){
+  .live-row{flex-direction:column;align-items:flex-start}
 }
