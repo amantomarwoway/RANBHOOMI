@@ -1,124 +1,176 @@
-# 🏆 Ranbhoomi – Gaming Tournament Website
+# 🎮 Ranbhoomi Gaming
 
-📖 परिचय / Introduction
-
-Ranbhoomi एक पूरी तरह तैयार गेमिंग टूर्नामेंट वेबसाइट है जिसमें खिलाड़ी आसानी से साइनअप, लॉगिन, टूर्नामेंट की जानकारी देख सकते हैं और एंट्री फीस ऑनलाइन जमा कर सकते हैं।
-खेल के बाद विजेताओं के रिज़ल्ट और पुरस्कार विवरण भी दिखाए जाते हैं।
-एडमिन पैनल के जरिए पंजीकरण, भुगतान और रिज़ल्ट आसानी से मैनेज किए जा सकते हैं।
-
-Ranbhoomi is a complete gaming tournament website where players can sign up, log in, view tournament details, and pay entry fees online.
-After the match, winners' results and prize details are displayed.
-An admin panel is included to manage registrations, payments, and results.
-
+**Welcome to Ranbhoomi Gaming!**  
+Step into the ultimate gaming arena where excitement never ends. Explore tournaments, check results, and join the action with just a click!
 
 ---
 
-✨ Features
+### 🌐 Navigate Through Our Pages
 
-📝 Player Signup & Login (Email/Mobile based)
-
-📅 Tournament List & Details
-
-💳 Online Entry Fee Payment – Razorpay Integration
-
-📜 Instant Registration Confirmation
-
-🏆 Results & Prize Display
-
-👤 Player Dashboard – View matches & status
-
-🔑 Admin Panel – Manage players, payments & results
-
-
+[🏠 Home Page](home.html)  
+[🏆 Tournament Page](tournament.html)  
+[🔑 Login Page](login.html)  
+[📝 Signup Page](signup.html)  
+[📄 Privacy Policy](privacy.html)  
+[💰 Refund Policy](refund.html)  
+[📊 Result Page](result.html)  
+[📜 Terms & Conditions](terms.html)  
+[💳 Tournament Payment Page](tournament-payment.html)
 
 ---
 
-🛠️ Tech Stack
+**Ranbhoomi Gaming** – Where every player gets their battle arena!  
+Join tournaments, track results, and experience the thrill of competitive gaming.
+# 🎮 Ranbhoomi Gaming
 
-Frontend: HTML, CSS, JavaScript
-
-Backend: Node.js, Express.js
-
-Database: MongoDB
-
-Payments: Razorpay API
-
-Auth: JWT / Session-based Authentication
-
-
+**Welcome to Ranbhoomi Gaming!**  
+Step into the ultimate gaming arena where excitement never ends. Explore tournaments, check results, and join the action with just a click!
 
 ---
 
-⚡ Installation & Setup
+### 🌐 Navigate Through Our Pages
 
-1️⃣ Clone the repository
+<div style="display: flex; flex-direction: column; gap: 10px;">
 
-git clone https://github.com/YOUR_USERNAME/RANBHOOMI.git
-cd RANBHOOMI
+<a href="home.html" style="text-decoration: none; padding: 10px 20px; background-color: #4CAF50; color: white; border-radius: 5px;">🏠 Home Page</a>
 
-2️⃣ Install dependencies
+<a href="tournament.html" style="text-decoration: none; padding: 10px 20px; background-color: #2196F3; color: white; border-radius: 5px;">🏆 Tournament Page</a>
 
-npm install
+<a href="login.html" style="text-decoration: none; padding: 10px 20px; background-color: #f44336; color: white; border-radius: 5px;">🔑 Login Page</a>
 
-3️⃣ Configure Environment Variables
+<a href="signup.html" style="text-decoration: none; padding: 10px 20px; background-color: #FF9800; color: white; border-radius: 5px;">📝 Signup Page</a>
 
-Create a .env file in the root directory:
+<a href="privacy.html" style="text-decoration: none; padding: 10px 20px; background-color: #9C27B0; color: white; border-radius: 5px;">📄 Privacy Policy</a>
 
-PORT=3000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
+<a href="refund.html" style="text-decoration: none; padding: 10px 20px; background-color: #795548; color: white; border-radius: 5px;">💰 Refund Policy</a>
 
-RAZORPAY_KEY_ID=rzp_test_xxxxx
-RAZORPAY_KEY_SECRET=your_key_secret
+<a href="result.html" style="text-decoration: none; padding: 10px 20px; background-color: #3F51B5; color: white; border-radius: 5px;">📊 Result Page</a>
 
-4️⃣ Start the server
+<a href="terms.html" style="text-decoration: none; padding: 10px 20px; background-color: #607D8B; color: white; border-radius: 5px;">📜 Terms & Conditions</a>
 
-npm start
+<a href="tournament-payment.html" style="text-decoration: none; padding: 10px 20px; background-color: #009688; color: white; border-radius: 5px;">💳 Tournament Payment Page</a>
 
-App will run at http://localhost:3000
+</div>
 
+---
+# 🎮 Ranbhoomi Gaming
+
+**Welcome to Ranbhoomi Gaming!**  
+Step into the ultimate gaming arena where excitement never ends. Explore tournaments, check results, and join the action with just a click!
 
 ---
 
-📸 Screenshots
+### 🌐 Navigate Through Our Pages
 
-(Add your screenshots here)
-
-Home Page – Tournament info
-
-Registration Page – Payment integration
-
-Player Dashboard – Matches & results
-
-Admin Panel – Manage data
-
-
+<table>
+  <tr>
+    <td>
+      <a href="home.html" style="text-decoration:none; display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; border-radius:5px;">🏠 Home</a>
+    </td>
+    <td>
+      <a href="tournament.html" style="text-decoration:none; display:inline-block; padding:10px 20px; background-color:#2196F3; color:white; border-radius:5px;">🏆 Tournament</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="login.html" style="text-decoration:none; display:inline-block; padding:10px 20px; background-color:#f44336; color:white; border-radius:5px;">🔑 Login</a>
+    </td>
+    <td>
+      <a href="signup.html" style="text-decoration:none; display:inline-block; padding:10px 20px; background-color:#FF9800; color:white; border-radius:5px;">📝 Signup</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="privacy.html" style="text-decoration:none; display:inline-block; padding:10px 20px; background-color:#9C27B0; color:white; border-radius:5px;">📄 Privacy</a>
+    </td>
+    <td>
+      <a href="refund.html" style="text-decoration:none; display:inline-block; padding:10px 20px; background-color:#795548; color:white; border-radius:5px;">💰 Refund</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="result.html" style="text-decoration:none; display:inline-block; padding:10px 20px; background-color:#3F51B5; color:white; border-radius:5px;">📊 Result</a>
+    </td>
+    <td>
+      <a href="terms.html" style="text-decoration:none; display:inline-block; padding:10px 20px; background-color:#607D8B; color:white; border-radius:5px;">📜 Terms</a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <a href="tournament-payment.html" style="text-decoration:none; display:inline-block; padding:10px 20px; background-color:#009688; color:white; border-radius:5px;">💳 Tournament Payment</a>
+    </td>
+  </tr>
+</table>
 
 ---
 
-🚀 Deployment
+**Ranbhoomi Gaming** – Where every player gets their battle arena!  
+Join tournaments, track results, and experience the thrill of competitive gaming.
 
-You can deploy this app to:
+**Ranbhoomi Gaming** – Where every player gets their battle arena!  
+Join tournaments, track results, and experience the thrill of competitive gaming.
+# 🎮 Ranbhoomi Gaming
 
-Render – Free Node.js hosting
+![Ranbhoomi Banner](https://media.giphy.com/media/3o7abld9cviwO3ZzUc/giphy.gif)  
 
-Railway – Easy GitHub deploy
+**Welcome to Ranbhoomi Gaming!**  
+Step into the ultimate gaming arena where excitement never ends. Explore tournaments, check results, and join the action with just a click!
 
-Heroku – Quick cloud hosting
-
-
-
----
-
-📜 License
-
-This project is licensed under the MIT License – free to use and modify.
-
+**🔥 Your Battle Arena Awaits! 🔥**
 
 ---
 
-💡 Note:
+### 🌐 Navigate Through Our Pages
 
-कभी भी .env फाइल GitHub पर push न करें।
+<style>
+.button {
+  display: inline-block;
+  padding: 12px 30px;
+  margin: 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
 
-Razorpay keys को सुरक्षित रखें।
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.5);
+}
+
+.home { background: linear-gradient(45deg,#4CAF50,#81C784); }
+.tournament { background: linear-gradient(45deg,#2196F3,#64B5F6); }
+.login { background: linear-gradient(45deg,#f44336,#E57373); }
+.signup { background: linear-gradient(45deg,#FF9800,#FFB74D); }
+.privacy { background: linear-gradient(45deg,#9C27B0,#BA68C8); }
+.refund { background: linear-gradient(45deg,#795548,#A1887F); }
+.result { background: linear-gradient(45deg,#3F51B5,#7986CB); }
+.terms { background: linear-gradient(45deg,#607D8B,#90A4AE); }
+.payment { background: linear-gradient(45deg,#009688,#26A69A); }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+</style>
+
+<div class="container">
+  <a href="home.html" class="button home">🏠 Home</a>
+  <a href="tournament.html" class="button tournament">🏆 Tournament</a>
+  <a href="login.html" class="button login">🔑 Login</a>
+  <a href="signup.html" class="button signup">📝 Signup</a>
+  <a href="privacy.html" class="button privacy">📄 Privacy</a>
+  <a href="refund.html" class="button refund">💰 Refund</a>
+  <a href="result.html" class="button result">📊 Result</a>
+  <a href="terms.html" class="button terms">📜 Terms</a>
+  <a href="tournament-payment.html" class="button payment">💳 Tournament Payment</a>
+</div>
+
+---
+
+**Ranbhoomi Gaming** – Where every player gets their battle arena!  
+Join tournaments, track results, and experience the thrill of competitive gaming.
